@@ -18,7 +18,11 @@ model = KNeighborsClassifier(n_neighbors=5)
 model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
+print("Predicted labels:", y_pred[:5])
+print("Actual labels:", y_test[:5])
 accuracy = accuracy_score(y_test, y_pred)
+
+
 
 print("Valori di y (target):", y)
 print("Etichette corrispondenti:", iris.target_names)
